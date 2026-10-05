@@ -175,8 +175,8 @@ type getStockInput struct {
 }
 
 type createOrderInput struct {
-	CustomerNo string          `json:"customer_no" jsonschema:"Kundennummer"`
-	Lines      []orderLineIn   `json:"lines" jsonschema:"Order positions"`
+	CustomerNo string        `json:"customer_no" jsonschema:"Kundennummer"`
+	Lines      []orderLineIn `json:"lines" jsonschema:"Order positions"`
 }
 
 type orderLineIn struct {

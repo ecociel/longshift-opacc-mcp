@@ -47,19 +47,19 @@ type OrderLine struct {
 }
 
 type Order struct {
-	OrderNo      string     `json:"order_no"`
-	CustomerNo   string     `json:"customer_no"`
-	CustomerName string     `json:"customer_name"`
-	Status       string     `json:"status"`
-	OrderedAt    time.Time  `json:"ordered_at"`
-	DeliveredAt  *time.Time `json:"delivered_at,omitempty"`
-	InvoiceNo    string     `json:"invoice_no,omitempty"`
+	OrderNo      string      `json:"order_no"`
+	CustomerNo   string      `json:"customer_no"`
+	CustomerName string      `json:"customer_name"`
+	Status       string      `json:"status"`
+	OrderedAt    time.Time   `json:"ordered_at"`
+	DeliveredAt  *time.Time  `json:"delivered_at,omitempty"`
+	InvoiceNo    string      `json:"invoice_no,omitempty"`
 	Lines        []OrderLine `json:"lines"`
-	Net          MoneyView  `json:"net"`
-	VAT          MoneyView  `json:"vat"`
-	Gross        MoneyView  `json:"gross"`
-	Currency     string     `json:"currency"`
-	Source       string     `json:"source"`
+	Net          MoneyView   `json:"net"`
+	VAT          MoneyView   `json:"vat"`
+	Gross        MoneyView   `json:"gross"`
+	Currency     string      `json:"currency"`
+	Source       string      `json:"source"`
 }
 
 type Invoice struct {
@@ -91,14 +91,14 @@ type Payment struct {
 }
 
 type Stock struct {
-	ArticleNo  string `json:"article_no"`
-	Name       string `json:"name"`
-	Warehouse  string `json:"warehouse"`
-	Lagerort   string `json:"lagerort"`
-	Unit       string `json:"unit"`
-	OnHand     int    `json:"on_hand"`
-	Reserved   int    `json:"reserved"`
-	Available  int    `json:"available"`
+	ArticleNo string `json:"article_no"`
+	Name      string `json:"name"`
+	Warehouse string `json:"warehouse"`
+	Lagerort  string `json:"lagerort"`
+	Unit      string `json:"unit"`
+	OnHand    int    `json:"on_hand"`
+	Reserved  int    `json:"reserved"`
+	Available int    `json:"available"`
 }
 
 type OpenItem struct {
@@ -124,12 +124,12 @@ type ListResult[T any] struct {
 }
 
 type Status struct {
-	Now         time.Time     `json:"now"`
-	WindowStart time.Time     `json:"window_start"`
-	Window      string        `json:"window"`
-	TimeScale   string        `json:"time_scale"`
-	Seed        int64         `json:"seed"`
-	Counts      StatusCounts  `json:"counts"`
+	Now         time.Time    `json:"now"`
+	WindowStart time.Time    `json:"window_start"`
+	Window      string       `json:"window"`
+	TimeScale   string       `json:"time_scale"`
+	Seed        int64        `json:"seed"`
+	Counts      StatusCounts `json:"counts"`
 }
 
 type StatusCounts struct {

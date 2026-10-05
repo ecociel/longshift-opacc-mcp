@@ -241,7 +241,7 @@ func formatWindow(d time.Duration) string {
 }
 
 func formatScale(d time.Duration) string {
-	return fmt.Sprintf("1s wall = %s simulated", d.String())
+	return fmt.Sprintf("1s wall = %s simulated", formatWindow(d))
 }
 
 func (w *World) ListCustomers(f ListFilter) ListResult[Customer] {
@@ -536,8 +536,8 @@ func (w *World) PostPayment(invoiceNo string, amountCHF float64, method string) 
 }
 
 type builtLines struct {
-	lines               []OrderLine
-	net, vat, gross     Money
+	lines           []OrderLine
+	net, vat, gross Money
 }
 
 func (w *World) buildLines(in []LineInput) (builtLines, error) {

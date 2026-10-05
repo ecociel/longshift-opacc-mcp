@@ -176,7 +176,7 @@ func TestMCPToolsListFetchAndWrite(t *testing.T) {
 	}
 
 	res, err = session.CallTool(ctx, &mcp.CallToolParams{
-		Name:      "create_sales_order",
+		Name: "create_sales_order",
 		Arguments: map[string]any{
 			"customer_no": cust.CustomerNo,
 			"lines":       []map[string]any{{"article_no": article, "qty": 1_000_000}},

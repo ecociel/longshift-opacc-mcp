@@ -153,7 +153,6 @@ func TestWritesSurviveAdvanceThenDropOutOfWindow(t *testing.T) {
 		t.Fatal("no orders")
 	}
 
-	stock := w.ListStock(ListFilter{Limit: 1, ArticleNo: ""})
 	var article string
 	for _, s := range w.ListStock(ListFilter{Limit: 200}).Items {
 		if s.Available >= 2 {
